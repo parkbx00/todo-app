@@ -7,13 +7,25 @@ import TodoList from "./component/TodoList/TodoList";
 
 class App extends Component {
   state = {
-    todos: [
-      { id: uuidv4(), title: "React coding" },
-      { id: uuidv4(), title: "JS coding" },
-      { id: uuidv4(), title: "TypeScript coding" },
-      { id: uuidv4(), title: "Journal" },
-    ],
+    todos: [],
   };
+
+  componentDidMount() {
+    if (localStorage.getItem("todos")) {
+      const todos = JSON.parse(localStorage.getItem("todos"));
+      this.setState({ todos });
+    } else {
+      const todos = [
+        { id: uuidv4(), title: "Todos are listed here." },
+        { id: uuidv4(), title: "Click trashcan icon to delete todos." },
+      ];
+      this.setState({ todos });
+    }
+  }
+
+  componentDidUpdate() {
+    localStorage.setItem("todos", JSON.stringify(this.state.todos));
+  }
 
   handleAddTodo = (title) => {
     const todos = [...this.state.todos, { id: uuidv4(), title }];

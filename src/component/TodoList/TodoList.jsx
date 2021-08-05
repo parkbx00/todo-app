@@ -6,11 +6,14 @@ function TodoList({ todosList, onDelete }) {
     onDelete(todo);
   };
 
+  const doesTodosExist = todosList.length > 0 ? true : false;
+
   return (
     <ul>
-      {todosList.map((todo) => (
-        <Todo key={todo.id} todo={todo} onDelete={handleDeleteTodo} />
-      ))}
+      {doesTodosExist &&
+        todosList.map((todo) => (
+          <Todo key={todo.id} todo={todo} onDelete={handleDeleteTodo} />
+        ))}
     </ul>
   );
 }
