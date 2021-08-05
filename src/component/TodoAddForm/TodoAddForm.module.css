@@ -1,0 +1,38 @@
+@value clr-light-borders, clr-light-highlight, clr-light-hover, clr-light-hoverFont, clr-light-fonts from "../../common/color.css";
+@value font-normal, timer-hover, border-radius from "../../common/size.css";
+
+.form {
+  margin-bottom: 0.5em;
+  display: flex;
+  justify-content: space-around;
+  height: 3em;
+}
+
+.input {
+  flex-basis: 90%;
+  border: 1px solid clr-light-borders;
+  text-align: center;
+  font-size: font-normal;
+  color: clr-light-fonts;
+  transition: all timer-hover ease-in-out;
+}
+
+.input:focus {
+  border: 1.5px solid clr-light-highlight;
+  border-radius: border-radius;
+}
+
+.button {
+  border: 1px solid clr-light-borders;
+  width: 1.5em;
+  height: 1.5em;
+  color: clr-light-fonts;
+  font-size: font-normal;
+  transition: all timer-hover ease-in-out;
+}
+
+.button:hover {
+  border-radius: border-radius;
+  background-color: clr-light-hover;
+  color: clr-light-hoverFont;
+}

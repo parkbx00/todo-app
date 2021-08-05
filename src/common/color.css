@@ -1,0 +1,14 @@
+/* Light Theme */
+@value clr-light-bg: #E3FDFD;
+@value clr-light-fonts: #0a666b;
+@value clr-light-borders: #71C9CE;
+@value clr-light-hoverFont: #fdfdfd;
+@value clr-light-hover: #56dbe8;
+@value clr-light-buttons: #A6E3E9;
+@value clr-light-highlight: #ff33a3;
+
+/* Dark Theme */
+@value clr-dark-bg: #334257;
+@value clr-dark-fonts: #EEEEEE;
+@value clr-dark-hover: #548CA8;
+@value clr-dark-buttons: #476072;

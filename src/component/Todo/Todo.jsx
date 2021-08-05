@@ -1,4 +1,5 @@
 import React from "react";
+import styles from "./Todo.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTrash } from "@fortawesome/free-solid-svg-icons";
 
@@ -8,9 +9,13 @@ function Todo({ todo, onDelete }) {
   };
 
   return (
-    <li>
-      {todo.title}
-      <FontAwesomeIcon icon={faTrash} onClick={handleDeleteTodo} />
+    <li className={styles.todo}>
+      <span className={styles.title}>{todo.title}</span>
+      <FontAwesomeIcon
+        className={styles.delete}
+        icon={faTrash}
+        onClick={handleDeleteTodo}
+      />
     </li>
   );
 }

@@ -1,4 +1,5 @@
 import React from "react";
+import styles from "./TodoHeader.module.css";
 
 function TodoHeader({ todosList }) {
   const date = new Date();
@@ -7,10 +8,10 @@ function TodoHeader({ todosList }) {
   const year = date.getFullYear();
 
   return (
-    <header>
-      <h1>Todo</h1>
-      <h3>{`${month}/${day}/${year}`}</h3>
-      <span>Total Todos: {todosList.length}</span>
+    <header className={styles.header}>
+      <h1 className={styles.title}>Todo List</h1>
+      <h3 className={styles.date}>{`${month}/${day}/${year}`}</h3>
+      <p className={styles.highlight}>Left Todos: {todosList.length}</p>
     </header>
   );
 }

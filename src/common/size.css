@@ -1,0 +1,14 @@
+/* Font Sizes */
+@value font-small: 0.5rem;
+@value font-normal: 2rem;
+@value font-large: 5rem;
+
+/* Font Weights */
+@value weight-normal: 300;
+@value weight-bold: 700;
+
+/* Timers */
+@value timer-hover: 300ms;
+
+/* Border Radius */
+@value border-radius: 15px;

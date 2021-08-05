@@ -25,6 +25,10 @@ class App extends Component {
 
   componentDidUpdate() {
     localStorage.setItem("todos", JSON.stringify(this.state.todos));
+    document.title =
+      this.state.todos.length > 0
+        ? `Todo: ${this.state.todos.length} left`
+        : "Todo: Congrats! No todo left.";
   }
 
   handleAddTodo = (title) => {

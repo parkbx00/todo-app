@@ -1,4 +1,5 @@
 import React from "react";
+import styles from "./TodoList.module.css";
 import Todo from "../Todo/Todo";
 
 function TodoList({ todosList, onDelete }) {
@@ -9,7 +10,7 @@ function TodoList({ todosList, onDelete }) {
   const doesTodosExist = todosList.length > 0 ? true : false;
 
   return (
-    <ul>
+    <ul className={styles.list}>
       {doesTodosExist &&
         todosList.map((todo) => (
           <Todo key={todo.id} todo={todo} onDelete={handleDeleteTodo} />

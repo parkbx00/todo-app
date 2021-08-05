@@ -1,0 +1,5 @@
+@value clr-light-borders from "../../common/color.css";
+
+.list {
+  border-top: 3px dashed clr-light-borders;
+}
