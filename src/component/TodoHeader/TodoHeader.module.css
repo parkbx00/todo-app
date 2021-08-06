@@ -1,6 +1,5 @@
-/* @value clr-light-borders, clr-light-highlight from "../../common/color.css"; */
-@value weight-bold from "../../common/size.css";
 @import "../../common/color.css";
+@value weight-bold from "../../common/size.css";
 
 .header {
   margin: 1em 0 0.5em;
@@ -20,22 +19,3 @@
   font-weight: weight-bold;
   color: var(--clr-highlight);
 }
-
-/* .header {
-    margin: 1em 0 0.5em;
-    border-bottom: 3px dashed clr-light-borders;
-}
-
-.title {
-    margin: 0 0 0.5em;
-    font-weight: weight-bold;
-}
-
-.date {
-    margin: 0;
-}
-
-.highlight {
-    font-weight: weight-bold;
-    color: clr-light-highlight;
-} */

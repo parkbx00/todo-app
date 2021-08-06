@@ -1,6 +1,5 @@
-/* @value clr-light-highlight, clr-light-hover, clr-light-hoverFont from "../../common/color.css"; */
-@value weight-bold, timer-hover from "../../common/size.css";
 @import "../../common/color.css";
+@value weight-bold, timer-hover from "../../common/size.css";
 
 .todo {
   display: flex;
@@ -23,6 +22,7 @@
 }
 
 .delete {
+  cursor: pointer;
   transition: all timer-hover ease-in;
 }
 

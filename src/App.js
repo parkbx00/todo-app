@@ -4,6 +4,7 @@ import { v4 as uuidv4 } from "uuid";
 import TodoHeader from "./component/TodoHeader/TodoHeader";
 import TodoAddForm from "./component/TodoAddForm/TodoAddForm";
 import TodoList from "./component/TodoList/TodoList";
+import ThemeToggle from "./component/ThemeToggle/ThemeToggle";
 
 class App extends Component {
   state = {
@@ -44,6 +45,7 @@ class App extends Component {
   render() {
     return (
       <>
+        <ThemeToggle />
         <TodoHeader todosList={this.state.todos} />
         <TodoAddForm todosList={this.state.todos} onAdd={this.handleAddTodo} />
         <TodoList

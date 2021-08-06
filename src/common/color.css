@@ -8,6 +8,7 @@
   --clr-buttons: #a6e3e9;
   --clr-highlight: #ff33a3;
   --clr-inputBg: #ffffff;
+  --clr-themeIcon: #ffa600;
 }
 
 [data-theme="dark"] {
@@ -19,4 +20,5 @@
   --clr-buttons: #476072;
   --clr-highlight: #ff33a3;
   --clr-inputBg: #3a3a3a;
+  --clr-themeIcon: #e7eb0e;
 }
