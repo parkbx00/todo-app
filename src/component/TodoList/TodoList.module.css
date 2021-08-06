@@ -1,5 +1,6 @@
-@value clr-light-borders from "../../common/color.css";
+/* @value clr-light-borders from "../../common/color.css"; */
+@import "../../common/color.css";
 
 .list {
-  border-top: 3px dashed clr-light-borders;
+  border-top: 3px dashed var(--clr-borders);
 }

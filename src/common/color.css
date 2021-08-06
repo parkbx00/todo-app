@@ -1,14 +1,22 @@
-/* Light Theme */
-@value clr-light-bg: #E3FDFD;
-@value clr-light-fonts: #0a666b;
-@value clr-light-borders: #71C9CE;
-@value clr-light-hoverFont: #fdfdfd;
-@value clr-light-hover: #56dbe8;
-@value clr-light-buttons: #A6E3E9;
-@value clr-light-highlight: #ff33a3;
+:root {
+  /* Light Theme */
+  --clr-bg: #e3fdfd;
+  --clr-fonts: #0a666b;
+  --clr-borders: #71c9ce;
+  --clr-hoverFont: #fdfdfd;
+  --clr-hover: #56dbe8;
+  --clr-buttons: #a6e3e9;
+  --clr-highlight: #ff33a3;
+  --clr-inputBg: #ffffff;
+}
 
-/* Dark Theme */
-@value clr-dark-bg: #334257;
-@value clr-dark-fonts: #EEEEEE;
-@value clr-dark-hover: #548CA8;
-@value clr-dark-buttons: #476072;
+[data-theme="dark"] {
+  --clr-bg: #334257;
+  --clr-fonts: #eeeeee;
+  --clr-borders: #548ca8;
+  --clr-hoverFont: #000000;
+  --clr-hover: #e4b715;
+  --clr-buttons: #476072;
+  --clr-highlight: #ff33a3;
+  --clr-inputBg: #3a3a3a;
+}

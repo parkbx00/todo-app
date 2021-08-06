@@ -1,5 +1,6 @@
-@value clr-light-highlight, clr-light-hover, clr-light-hoverFont from "../../common/color.css";
+/* @value clr-light-highlight, clr-light-hover, clr-light-hoverFont from "../../common/color.css"; */
 @value weight-bold, timer-hover from "../../common/size.css";
+@import "../../common/color.css";
 
 .todo {
   display: flex;
@@ -10,7 +11,7 @@
 }
 
 .todo:hover.todo {
-  background-color: clr-light-hover;
+  background-color: var(--clr-hover);
 }
 
 .title {
@@ -18,7 +19,7 @@
   transition: all timer-hover ease-in;
 }
 .todo:hover .title {
-  color: clr-light-highlight;
+  color: var(--clr-highlight);
 }
 
 .delete {
@@ -27,5 +28,5 @@
 
 .delete:hover {
   transform: scale(1.1);
-  color: clr-light-hoverFont;
+  color: var(--clr-hoverFont);
 }
