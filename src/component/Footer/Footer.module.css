@@ -1,0 +1,16 @@
+@import "../../common/color.css";
+@value font-normal, timer-hover from "../../common/size.css";
+
+.icon {
+  font-size: font-normal;
+  color: var(--clr-fonts);
+  transition: all timer-hover ease-in-out;
+}
+
+.icon:hover {
+  color: var(--clr-hover);
+}
+
+.highlight {
+  color: var(--clr-highlight);
+}

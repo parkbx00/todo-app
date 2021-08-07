@@ -2,4 +2,5 @@
 
 .list {
   border-top: 3px dashed var(--clr-borders);
+  flex-basis: 100%;
 }

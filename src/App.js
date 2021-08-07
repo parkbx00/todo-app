@@ -1,10 +1,11 @@
-import "./App.module.css";
 import React, { Component } from "react";
+import styles from "./App.module.css";
 import { v4 as uuidv4 } from "uuid";
 import TodoHeader from "./component/TodoHeader/TodoHeader";
 import TodoAddForm from "./component/TodoAddForm/TodoAddForm";
 import TodoList from "./component/TodoList/TodoList";
 import ThemeToggle from "./component/ThemeToggle/ThemeToggle";
+import Footer from "./component/Footer/Footer";
 
 class App extends Component {
   state = {
@@ -44,15 +45,17 @@ class App extends Component {
 
   render() {
     return (
-      <>
+      <div className={styles.main}>
         <ThemeToggle />
         <TodoHeader todosList={this.state.todos} />
         <TodoAddForm todosList={this.state.todos} onAdd={this.handleAddTodo} />
         <TodoList
+          className={styles.list}
           todosList={this.state.todos}
           onDelete={this.handleDeleteTodo}
         />
-      </>
+        <Footer />
+      </div>
     );
   }
 }
