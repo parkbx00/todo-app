@@ -1,18 +1,19 @@
-# Track Daily Task with Minimal Todo App
+# Track Daily Tasks with the Minimal Todo App
 
-Minimal Todo App created to help you knock out the daily tasks.
-\*\* Todo list and light/dark theme setting are saved locally in web localstorage.
+Minimal Todo App built with React to help you track and knock out daily tasks.  
+  
+\*\* Todo list and light/dark theme setting are saved locally in the web localstorage.
 
 ## Helpful Navigation Tips:
 
 ### `Add Todo`
 
-Simply add todos by typing and press enter or click `+` button!
+Add todos by typing and pressing `enter` or clicking the `+` button.
 
 ### `Delete Todo`
 
-Delete todo by clicking `trashcan` button!
+Delete todos by clicking the `trashcan` button.
 
 ### `Toggle Light/Dark Themes`
 
-Toggle between light and dark themes by clicking on the `slider` located top right corner!
+Toggle between light and dark themes by clicking on the `slider` located on top right corner.
