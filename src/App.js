@@ -19,7 +19,15 @@ class App extends Component {
     } else {
       const todos = [
         { id: uuidv4(), title: "Todos are listed here." },
-        { id: uuidv4(), title: "Click trashcan icon to delete todos." },
+        {
+          id: uuidv4(),
+          title: "Click the trashcan icon to delete todos.",
+        },
+        {
+          id: uuidv4(),
+          title:
+            "Edit todos by double clicking the todo and press enter key when finished.",
+        },
       ];
       this.setState({ todos });
     }
@@ -30,7 +38,7 @@ class App extends Component {
     document.title =
       this.state.todos.length > 0
         ? `Todo: ${this.state.todos.length} left`
-        : "Todo: Congrats! No todo left.";
+        : "🎉 Congrats! No todos left.";
   }
 
   handleAddTodo = (title) => {
@@ -43,6 +51,15 @@ class App extends Component {
     this.setState({ todos });
   };
 
+  handleUpdateTodo = (title, id) => {
+    this.setState({
+      todos: this.state.todos.map((todo) => {
+        todo.id === id && (todo.title = title);
+        return todo;
+      }),
+    });
+  };
+
   render() {
     return (
       <div className={styles.main}>
@@ -53,6 +70,7 @@ class App extends Component {
           className={styles.list}
           todosList={this.state.todos}
           onDelete={this.handleDeleteTodo}
+          onUpdate={this.handleUpdateTodo}
         />
         <Footer />
       </div>

@@ -1,9 +1,11 @@
 @import "../../common/color.css";
-@value weight-bold, timer-hover from "../../common/size.css";
+@value weight-bold, timer-hover, border-radius from "../../common/size.css";
 
 .todo {
+  position: relative;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
+  align-items: center;
   margin: 0.25em 0;
   padding: 0.5em;
   transition: all timer-hover ease-in;
@@ -14,11 +16,44 @@
 }
 
 .title {
+  position: absolute;
+  left: 1%;
   font-weight: weight-bold;
-  transition: all timer-hover ease-in;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.title.active {
+  opacity: 1;
+  pointer-events: painted;
+  transition: all timer-hover ease-in-out;
 }
 .todo:hover .title {
   color: var(--clr-highlight);
+}
+
+.input {
+  position: absolute;
+  left: 1%;
+  border: 1px solid var(--clr-borders);
+  padding: 0.5em;
+  width: 90%;
+  text-align: center;
+  color: var(--clr-fonts);
+  background-color: var(--clr-inputBg);
+  opacity: 0;
+  pointer-events: none;
+  transition: all timer-hover ease-in-out;
+}
+
+.input.active {
+  opacity: 1;
+  pointer-events: painted;
+}
+
+.input:focus {
+  border: 1px solid var(--clr-hover);
+  border-radius: border-radius;
 }
 
 .delete {
